@@ -6,7 +6,7 @@ import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import { SectionHeader } from "@/components/SectionHeader";
 import Image from "next/image";
 import grainImage from "@/assets/images/grain.jpg";
-import Card from "@/components/Card"; // Assuming Card is a default export
+import Card from "@/components/Card";
 
 const testimonials = [
 	{
@@ -43,35 +43,38 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
 	return (
-		<div className="py-16">
-			<div className="container mx-auto px-4">
+		<div className="py-16 lg:py-24">
+			<div className="container">
 				<SectionHeader
-					eyebrow="Happy Clients" // Corrected typo here
+					eybrow="Happy Clients"
 					title="What Clients Say about Us"
 					description="We've had the pleasure of working with some amazing clients over the years. Here's what they have to say about our work."
 				/>
 
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div className="mt-16 lg:mt-24 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] ">
+          <div className="flex gap-8 flex-none">
 					{testimonials.map((testimonial) => (
-						<Card key={testimonial.name} className="p-6 bg-white rounded-lg shadow-lg">
-							<div className="flex items-center gap-4 mb-4">
-								<Image
+						<Card key={testimonial.name} className="max-w-xs md:max-w-md md:p-8">
+							<div className="flex gap-4 items-center">
+                <div className="size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0">
+                <Image
 									src={testimonial.avatar}
 									alt={testimonial.name}
-									width={80}
-									height={80}
-									className="rounded-full"
+									className="max-w-full "
 								/>
-								<div>
-									<div className="font-semibold text-lg">{testimonial.name}</div>
-									<div className="text-sm text-gray-500">{testimonial.position}</div>
-								</div>
-							</div>
-							<p className="text-gray-700">{testimonial.text}</p>
+                </div>
+					  <div>
+            		<div className="font-semibold">{testimonial.name} </div>
+								<div className="text-sm text-white/40">{testimonial.position}</div>
+						</div>
+        </div>
+
+							<p className="mt-4 md:mt-6 text-sm md:text-base">{testimonial.text}</p>
 						</Card>
 					))}
 				</div>
 			</div>
+      </div>
 		</div>
 	);
 };

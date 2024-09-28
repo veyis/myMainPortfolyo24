@@ -51,35 +51,35 @@ const toolboxItems = [
 const hobbies = [
 	{
 		title: "Hiking",
-		emoji: "", // Optionally handle missing icon here.
+		emoji: "🥾", // Optionally handle missing icon here.
 	},
 	{
 		title: "Photography",
-		emoji: "", // Optionally handle missing icon here.
+		emoji: "📷", // Optionally handle missing icon here.
 	},
 	{
 		title: "Traveling",
-		emoji: "", // Optionally handle missing icon here.
+		emoji: "✈️", // Optionally handle missing icon here.
 	},
 	{
 		title: "Gaming",
-		emoji: "", // Optionally handle missing icon here.
+		emoji: "⚾️", // Optionally handle missing icon here.
 	},
 	{
 		title: "Reading",
-		emoji: "", // Optionally handle missing icon here.
+		emoji: "📚", // Optionally handle missing icon here.
 	},
 	{
 		title: "Fitness",
-		emoji: "", // Optionally handle missing icon here.
+		emoji: "🥾", // Optionally handle missing icon here.
 	},
 	{
 		title: "Yoga",
-		emoji: "", // Optionally handle missing icon here.
+		emoji: "🧘", // Optionally handle missing icon here.
 	},
 	{
 		title: "Meditation",
-		emoji: "", // Optionally handle missing icon here.
+		emoji: "🧘🏾‍♂️", // Optionally handle missing icon here.
 	},
 ];
 

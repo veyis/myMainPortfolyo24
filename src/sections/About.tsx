@@ -12,6 +12,8 @@ import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/TechIcon";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+import { CardHeader } from "@/components/CardHeader";
+import { ToolboxItems } from "@/components/ToolboxItems";
 
 const toolboxItems = [
 	{
@@ -31,20 +33,12 @@ const toolboxItems = [
 		icon: HTMLIcon,
 	},
 	{
-		title: "Figma",
-		icon: "", // Optionally handle missing icon here.
-	},
-	{
 		title: "CSS",
 		icon: CSSIcon,
 	},
 	{
 		title: "GitHub",
 		icon: GithubIcon,
-	},
-	{
-		title: "Netlify",
-		icon: "", // Optionally handle missing icon here.
 	},
 ];
 
@@ -85,71 +79,94 @@ const hobbies = [
 
 export const AboutSection = () => {
 	return (
-		<div className="pb-96">
-			<SectionHeader
-				eybrow="About Us" // Fixed typo from `eybrow` to `eyebrow`
-				title="A glimpse into our story"
-				description="Learn more about who I am and what I do, and how I can help you with your next project."
-			/>
+		<div className="py-20">
+			<div className="container">
+				<SectionHeader
+					eybrow="About Us" // Fixed typo from `eybrow` to `eyebrow`
+					title="A glimpse into our story"
+					description="Learn more about who I am and what I do, and how I can help you with your next project."
+				/>
 
-			<div className="space-y-8">
-				<Card>
-					<div className="mb-4">
-						<StarIcon />
-						<h3 className="text-lg font-semibold">My Reads</h3>
-						<p className="text-gray-600">
-							Explore the books shaping my perspective on design, technology,
-							and life.
-						</p>
-					</div>
-					<Image src={bookImage} alt="Book Cover" />
-				</Card>
+				<div className="mt-20 flex flex-col gap-8">
+					<div className="grid grid-cols-1 gap-8 md:grid-cols-5">
 
-				<Card>
-					<div className="mb-4">
-						<StarIcon />
-						<h3 className="text-lg font-semibold">My Toolbox</h3>
-						<p className="text-gray-600">
-							Explore the technologies and tools I use to craft exceptional
-							digital experiences for my clients.
-						</p>
-					</div>
-					<div className="grid grid-cols-2 gap-4">
-						{toolboxItems.map((item) => (
-							<div key={item.title} className="flex items-center gap-2">
-								{item.icon ? (
-									<TechIcon component={item.icon} />
-								) : (
-									<span>No icon available</span>
-								)}
-								<span>{item.title}</span>
-							</div>
-						))}
-					</div>
-				</Card>
-				<Card>
-					<div>
-						<StarIcon />
-						<h3 className="text-lg font-semibold">Beyond the Code</h3>
-						<p className="text-gray-600">
-							Explore the interests and hobbies that keep me inspired and
-							creative.
-						</p>
-					</div>
-					<div>
-						{hobbies.map((hobby) => (
-							<div key={hobby.title} className="flex items-center gap-2">
-								<span>{hobby.title}</span>
-								<span>{hobby.emoji}</span>
-							</div>
-						))}
-					</div>
-				</Card>
+          
+          <Card className="h-[320px] md:col-span-2">
+						<CardHeader
+							title="My Reads"
+							description="Explore the books shaping my perspective "
+							className=""
+						/>
+						<div className="w-40 mx-auto mt-2 md:mt-0">
+							<Image src={bookImage} alt="Book Cover" />
+						</div>
+					</Card>
 
-				<Card>
-					<Image src={mapImage} alt="Map" />
-					<Image src={smileMemoji} alt="Smiling Memoji" />
-				</Card>
+					<Card className="h-[320px] p-0 md:col-span-3">
+						<CardHeader
+							title="My Toolbox"
+							description="Explore the technologies and tools I use to craft exceptional digital experiences for my clients."
+							className=""
+						/>
+
+						<ToolboxItems toolboxItems={toolboxItems} className="mt-6" />
+						<ToolboxItems
+							toolboxItems={toolboxItems}
+							className="mt-6"
+							itemsWrapperClassName="-translate-x-1/2"
+						/>
+					</Card>
+          </div>
+
+
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 ">
+				
+        	<Card className="h-[320px] p-0 flex flex-col col-span-3">
+						<CardHeader
+							title="Beyond the Code"
+							description="Explore the interests and hobbies that keep me inspired and creative."
+							className="px-6 pt-6 "
+						/>
+						<div className="space-y-4 space-x-4 px-6">
+							{hobbies.map((hobby) => (
+								<div
+									key={hobby.title}
+									className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5"
+								>
+									<span className="font-medium text-gray-950 ">
+										{hobby.title}
+									</span>
+									<span>{hobby.emoji}</span>
+								</div>
+							))}
+						</div>
+					</Card>
+
+					<Card className="h-[320px] p-0 relative col-span-2">
+						<Image
+							src={mapImage}
+							alt="Map"
+							className="h-full w-full object-cover object-left-top "
+						/>
+
+						<div
+							className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 rounded-full 
+           bg-gradient-to-r from-emerald-300 to-sky-400
+           after:content-[''] after:absolute after:inset-0 after:outline-2 
+           after:outline after:outline-offset-2 after:rounded-full
+            after:outline-gray-950/30"
+						>
+							<Image
+								src={smileMemoji}
+								alt="Smiling Memoji"
+								className="w-20 h-20"
+							/>
+						</div>
+					</Card>
+
+        </div>
+
+				</div>
 			</div>
 		</div>
 	);

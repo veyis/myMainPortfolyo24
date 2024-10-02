@@ -8,12 +8,16 @@
     }
 
     .hero-ring {
-        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5;
+        @apply absolute inset-0 border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5;
+        /* Custom box-shadow applied directly */
+        box-shadow: 0 0 80px inset rgba(16, 185, 129, 0.05);
     }
 }
 
 @layer utilities {
     .container {
-        @apply lg:max-w-5xl
+        @apply lg:max-w-5xl;
     }
 }
+
+

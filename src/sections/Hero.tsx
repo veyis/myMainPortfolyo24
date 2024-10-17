@@ -101,15 +101,15 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Building exceptional User Experiences
+          Revolutionize Your Business with us!
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in transforming designs into functional, high-performing web applications. Let's discuss your next project.
+          From stunning Next.js websites to cutting-edge AI-driven strategies, we create digital experiences that convert. Let’s grow your brand in the new era of intelligent marketing.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore my Work</span>
+            <span className="font-semibold">Get Your Free Strategy</span>
             <ArrowDown className="w-4 h-4" />
           </button>
 

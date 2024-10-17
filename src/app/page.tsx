@@ -7,6 +7,7 @@ import { HeroSection } from "@/sections/Hero";
 import { ProjectsSection } from "@/sections/Projects";
 import { TapeSection } from "@/sections/Tape";
 import { TestimonialsSection } from "@/sections/Testimonials";
+import { WhyChooseUsSection } from "@/sections/WhyChoose";
 
 
 
@@ -19,6 +20,7 @@ export default function Home() {
   <HeroSection />
   <ProjectsSection />
   <TapeSection/>
+    <WhyChooseUsSection/>
   <TestimonialsSection />
   <AboutSection />
   <ContactSection />

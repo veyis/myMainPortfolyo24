@@ -2,16 +2,16 @@ import StarIcon from "@/assets/icons/star.svg";
 import { Fragment } from "react";
 
 const words = [
-	"Performant",
+	"AI Powered",
 	"Accessible",
-	"Secure",
+	"Data Driven",
 	"Interactive",
 	"Scalable",
 	"User-friendly",
 	"Responsive",
 	"Maintainable",
 	"Search Optimized",
-	"Usable",
+	"Cutting Edge",
 	"Reliable",
 	"Fast",
 	"Dynamic",

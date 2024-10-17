@@ -2,7 +2,7 @@ const Pxlogo = ({ className = "" }) => {
     return (
       <div className={`relative flex items-center space-x-0.5 ${className}`}>
         <span
-          className="relative text-4xl lg:text-5xl font-bold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center text-transparent bg-clip-text"
+          className="relative text-2xl lg:text-3xl font-bold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center text-transparent bg-clip-text"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           pxl
@@ -12,7 +12,7 @@ const Pxlogo = ({ className = "" }) => {
           ></span>
         </span>
         <span
-          className="text-4xl lg:text-5xl font-bold text- tracking-normal"
+          className="text-2xl lg:text-3xl font-bold text- tracking-normal"
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           peak
